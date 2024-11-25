@@ -1,0 +1,36 @@
+<div class="news-container">
+  <p class="page-title">Top News</p>
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Search</mat-label>
+    <input
+      matInput
+      [(ngModel)]="searchTerm"
+      (keyup.enter)="onSearch()"
+      placeholder="Search Stories"
+      type="text"
+    />
+    <button mat-icon-button matSuffix aria-label="Search" (click)="onSearch()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+  <div class="story-cards-container">
+    <mat-progress-bar
+      color="primary"
+      *ngIf="loading"
+      mode="indeterminate"
+    ></mat-progress-bar>
+    <div *ngFor="let news of newsList">
+      <app-news-card [news]="news"></app-news-card>
+    </div>
+  </div>
+
+  <mat-paginator
+    #paginator
+    (page)="onPageChange($event)"
+    [length]="totalNews"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[5, 10, 20]"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+</div>

@@ -1,0 +1,2 @@
+D:\WorkSpace\Angular\hacker-news-new\hacker-news\hacker-news.client\obj\Debug\hacker-news.client.esproj.CoreCompileInputs.cache
+C:\Users\Muzamil\Downloads\hacker-news-new\hacker-news.client\obj\Debug\hacker-news.client.esproj.CoreCompileInputs.cache

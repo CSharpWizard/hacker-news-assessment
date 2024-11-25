@@ -1,0 +1,26 @@
+﻿:host {
+    max-width: 1280px;
+    padding: 0rem;
+
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+table {
+    margin: 0 auto;
+}
+
+#app-logo{
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.mat-toolbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

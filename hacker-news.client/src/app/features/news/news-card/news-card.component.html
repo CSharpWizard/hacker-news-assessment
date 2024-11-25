@@ -1,0 +1,10 @@
+@if(news) {
+  <mat-card class="story-card">
+    <mat-card-title>{{ news.title }}</mat-card-title>
+    <mat-card-actions>
+      <a mat-stroked-button color="primary" [href]="news.url" target="_blank"
+        >Read More</a
+      >
+    </mat-card-actions>
+  </mat-card>
+}
