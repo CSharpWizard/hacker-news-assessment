@@ -1,34 +1,64 @@
-# Read me first
 
-## Built with
+# Hacker News
 
-- Dotnet Core v8.0
-- Angular v18.2
-- Angular Material v17.0
-- Official Hacker News API => [https://github.com/HackerNews/API](https://github.com/HackerNews/API)
+This project consists of a .NET Core API and an Angular frontend designed to show latest stories from Hacker news api.
 
 ## Getting Started
 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
 ### Prerequisites
 
-Get the newest vscode => [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+What you need to install the software:
 
-Get the vs => [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/)
-
-Get the newest LTS node => [https://nodejs.org](https://nodejs.org)
+- [.NET 8 SDK](https://dotnet.microsoft.com/download) - Ensure you install the correct version for project.
+- [Node.js](https://nodejs.org/en/download/) - Comes with npm which is needed for Angular CLI.
+- [Angular CLI](https://angular.io/cli) - For running the Angular development server.
 
 ### Installation
 
-1. Setup Angular CLI using a package manager.
-   ```sh
-   npm install @angular/cli
-   ```
-2. Launch the project in Visual Studio
-   ```
-   hacker-news
-   ```
-3. Click on Start button to launch the frontend and backend concurrently.
+A step by step guide that will tell you how to get the development environment running.
 
-4. First run needs to install node_modules.
+#### Backend Setup
 
-5. First API call will take some time.
+1. Navigate to the backend project directory:
+   ```bash
+   cd hacker-news.Server
+   ```
+2. Restore the .NET dependencies:
+   ```bash
+   dotnet restore
+   ```
+3. Start the backend server:
+   ```bash
+   dotnet run
+   ```
+   This will launch the .NET Core API at `https://localhost:7159/` (or any port you have configured, Please change that in Angular Proxy as well).
+
+#### Frontend Setup
+
+1. Navigate to the frontend project directory:
+   ```bash
+   cd hacker-news.client
+   ```
+2. Install the required npm packages:
+   ```bash
+   npm install
+   ```
+3. Serve the application using Angular CLI:
+   ```bash
+   ng serve
+   ```
+   This will make the Angular app available at `http://localhost:4200/`.
+
+### Usage
+
+1. Open your web browser and go to `http://localhost:4200/`.
+2. Application will load first 10 news from backend api.
+3- User search to find any news.
+
+## Built With
+
+- [.NET Core](https://dotnet.microsoft.com/) - The backend framework used.
+- [Angular](https://angular.io/) - The frontend framework used.
+- [Material Components for Angular](https://material.angular.io/) - Used for UI components.
